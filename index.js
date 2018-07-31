@@ -1,39 +1,28 @@
+class BoardMember{
+  constructor(name, homeState, training){
+    this.name = name
+    this.homeState = homeState
+    this.training = training
+  }
+  veto(){
+    return 'No, I must disagree'
+  }
+  approve(){
+    return 'You can do that!'
+  }
+  doCharity(){
+    return "I like to help people."
+  }
+  releasePressStatement(){
+    return "You will see great things from Scuber."
+  }
+  sayHi(){
+    return `Hi, my name is ${this.name}. I am from ${this.homeState}, and I was trained in ${this.training}.`
+  }
+}
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-
-    <title>Object Oriented Class Syntax Lab </title>
-    <meta name="description" content="Object Oriented Class Syntax Lab in the Learn.co curriculum">
-    <meta name="author" content="Flatiron School">
-
-    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
-  </head>
-
-  <body>
-    <!-- <div> for Mocha to display test results. -->
-    <div id="mocha"></div>
-
-    <!-- Include Mocha and set it up for BDD-style testing. -->
-    <script src="node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
-
-    <!-- Include Chai as the matcher library. -->
-    <script src="node_modules/chai/chai.js"></script>
-
-
-
-
-
-
-    <!-- Include the student's JavaScript file. -->
-    <script src="index.js"></script>
-
-    <!-- Include the JavaScript file containing the tests. -->
-    <script src="test/indexTest.js"></script>
-
-    <!-- Include Flatiron School's test runner to push results to Learn. -->
-    <script src="node_modules/learn-browser/learnBrowser.min.js"></script>
-  </body>
-</html>
+class Ceo extends BoardMember {
+  hireEmployee(){
+    return "Welcome aboard!"
+  }
+}
